@@ -10,16 +10,14 @@ import {
 
 async function main() {
     const connection = new Connection("http://localhost:8899");
-    connection.onLogs(
-        'all',
-        (logs: Logs) => {
-            console.log(">", logs);
-        },
-        "confirmed"
-    );
-    const programId = new PublicKey("6UDJi13e4PyM3KSRUgJoF2BYxTYmYVFUPMy2qG4JMRFf")
+    const programId = new PublicKey("EMZDuMn33tTJKpkKTmcLHgSp8k5zm6vYvv8FoUZMSGUX")
+    const calledId = new PublicKey("6Dyva8NZbtpzvtcefzoKuJNEgaj1iYi4Himqd8urJhZZ");
     const ix = new TransactionInstruction({
-        keys: [],
+        keys: [{
+            pubkey: calledId,
+            isSigner: false,
+            isWritable: false,
+        }],
         programId,
         data: Buffer.alloc(0)
     });

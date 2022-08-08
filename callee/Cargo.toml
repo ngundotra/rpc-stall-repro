@@ -10,10 +10,10 @@ name = "callee"
 
 [features]
 no-entrypoint = []
-no-idl = []
-no-log-ix-name = []
-cpi = ["no-entrypoint"]
-default = []
+# no-idl = []
+# no-log-ix-name = []
+# cpi = ["no-entrypoint"]
+# default = []
 
 
 [dependencies]

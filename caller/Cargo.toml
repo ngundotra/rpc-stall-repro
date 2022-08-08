@@ -10,12 +10,12 @@ name = "caller"
 
 [features]
 no-entrypoint = []
-no-idl = []
-no-log-ix-name = []
-cpi = ["no-entrypoint"]
-default = ["cpi"]
+# no-idl = []
+# no-log-ix-name = []
+# cpi = ["no-entrypoint"]
+# default = ["cpi"]
 
 
 [dependencies]
 solana-program = "~1.10.29"
-callee = { path = "../callee" }
+callee = { path = "../callee", features=['no-entrypoint'] }
